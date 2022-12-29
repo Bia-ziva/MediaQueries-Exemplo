@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor1:#7FFFD4;
+    --cor2:#66CDAA;
+    --cor3:#2E8B57;
+    --cor4:#40E0D0;
+    --cor5:#90EE90;
+    --cor6:#00FA9A;
+    --cor7:#3CB371;
+    --texto1:#000000;
+    --texto2:#FFFFFF;
+}
+body{
+    font-family: 'Caveat', cursive;
+}
+/* Layout Monitor P.C */
+.cabecalho{
+    width: 100%;
+    padding: 1.5em;
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecalho img{
+    width: 150px;
+}
+.navegacao ul li{
+    display: inline-block;
+}
+.navegacao ul li a{
+    padding: .5em 2em;
+    text-decoration: none;
+    color: var(--texto2);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.principal{
+   /*  background-image: url(../imagens/starbucks.jpg); */
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../imagens/copo.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em;
+    color: var(--texto2);
+}
+.texto-principal{
+    width: 33%;
+}
+.texto-principal h2{
+    color: var(--texto2);
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 400;
+}
+.texto-principal p{
+    line-height: 1.8;
+    margin-top: 1.5em;
+}
+.texto-principal p span{
+    color: var(--cor1);
+}
+.formulario{
+    width: 40%;
+    /* background-color: var(--cor2); */
+    padding: 1.5em;
+    color: var(--texto2);
+    display: flex;
+    flex-direction: column;
+}
+.formulario p{
+    font-size: 1.25em;
+    margin-bottom: 1em;
+}
+.formulario input{
+    width: 100%;
+    padding: .75em;
+    margin-bottom: 1em;
+}
+.formulario .btn{
+    width: 60%;
+    margin: auto;
+    padding: 1.5em;
+    background-color: var(--cor3);
+    font-size: 1.2em;
+    color: var(--texto2);
+}
+
+
+
+/* Layout Tablet */
+@media (max-width: 780px){
+    .cabecalho{
+        background-color: var(--cor7);
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .cabecalho img{
+        width: 100px;
+        margin-bottom: 2em;
+    }
+}
+/* Layout SmartPhone */
+@media (max-width: 400px){
+    .cabecalho{
+        background-color: var(--cor4);
+    }
+    .cabecalho img{
+        width: 75px;
+    }
+    .navegacao ul li{
+        display: block;
+        padding: .8em;
+    }
+}
